@@ -1,58 +1,41 @@
-User Management System — React CRUD App
+🚀 User Management System — React CRUD Application
 
-This project is a simple React-based CRUD application for managing users. It allows creating, viewing, updating, and deleting users using a REST API.
+A React-based CRUD web application to manage user data using a REST API.
+The application is designed with future extensibility, allowing new fields to be added with minimal code changes.
 
-The application is structured to allow easy future extensibility with minimal code changes when adding new fields.
+🌐 Live Demo
 
-Live Demo
+Frontend Application
+👉 https://user-management-system-eta-two.vercel.app/
 
-Frontend:
-https://user-management-system-eta-two.vercel.app/
+Backend API
+👉 https://user-crud-backend-4bl5.onrender.com/users
 
-Backend API:
-https://user-crud-backend-4bl5.onrender.com/users
+📂 Source Code Repositories
+Layer	Repository
+Frontend	https://github.com/Jankiparmar311/User-management-system
 
-Repositories
+Backend API	https://github.com/Jankiparmar311/user-crud-backend
+✅ Features Implemented
 
-Frontend Repository:
-https://github.com/Jankiparmar311/User-management-system
+✔ Create users
+✔ List users
+✔ Update user details
+✔ Delete users with confirmation modal
+✔ Form validation
+✔ Search users
+✔ Toast success & error notifications
+✔ Responsive UI layout
+✔ Extensible form architecture
 
-Backend Repository:
-https://github.com/Jankiparmar311/user-crud-backend
+🧱 Tech Stack
+Frontend
 
-Features Implemented
-
-Create user
-
-View all users
-
-Update user
-
-Delete user
-
-Form validation
-
-Search users
-
-Confirmation modal for deletion
-
-Toast notifications
-
-Responsive layout
-
-Configuration-driven form fields
-
-Extensible form architecture
-
-Tech Stack
-
-Frontend:
-
-React
+React (Vite)
 
 Tailwind CSS
 
-Formik (form handling)
+Formik
 
 Yup validation
 
@@ -60,84 +43,73 @@ Axios
 
 React Toastify
 
-Backend:
+Backend
 
-JSON Server (mock REST API)
+JSON Server
 
-Deployed on Render
+Hosted on Render
 
-Project Structure
+🔧 Extensibility — Adding New Fields
 
-Frontend includes:
-
-Reusable Modal component
-
-Config-based form fields
-
-API service layer
-
-Clean component separation
-
-Backend:
-
-JSON Server using db.json
-
-Hosted via Render
-
-Setup Instructions (Frontend)
-
-Install dependencies:
-
-npm install
-
-Run locally:
-
-npm run dev
-
-Backend Setup
-
-Install dependencies:
-
-npm install
-
-Start API:
-
-npm start
-
-Runs JSON server using db.json.
-
-Extensibility — Adding New Fields
+The form is configuration-driven.
 
 To add a new field:
 
 Add field configuration in:
+
 config/formField.js
 
-Add validation rule in validationSchema.
 
-No changes required in UI or form logic since form renders dynamically from configuration.
+Add validation rule in validation schema.
 
-Example additions:
+No UI changes required since form renders dynamically.
+
+Example future fields:
 
 Date of Birth
 
 Address
 
-Company
+Company Name
 
-etc.
+Role
 
-Assumptions / Decisions
+🎨 UI/UX Decisions
+
+Clean minimal interface
+
+Modal-based add/edit workflow
+
+Search filtering
+
+Confirmation before deletion
+
+Loading & error feedback
+
+Mobile-friendly layout
+
+🚀 Deployment
+Service	Platform
+Frontend	Vercel
+Backend	Render
+📌 Assumptions
+
+Authentication not required.
+
+Pagination skipped as not required in test task.
 
 JSON Server used as mock backend.
 
-Authentication not required per assignment.
+📬 Submission Notes
 
-Pagination skipped as not required.
+This project focuses on:
 
-Focus placed on extensible architecture and clean UX.
+Clean React architecture
 
-Deployment
+Extensible design
 
-Frontend deployed using Vercel.
-Backend deployed using Render.
+Good UX
+
+Maintainable code
+
+Proper API integration
