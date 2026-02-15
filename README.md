@@ -69,10 +69,9 @@ Layer	Repository
 - JSON Server used as mock backend.
 
 📬 Submission Notes
-   This project focuses on:
+= This project focuses on:
 - Clean React architecture
 - Extensible design
 - Good UX
 - Maintainable code
-
-Proper API integration
+- Proper API integration
