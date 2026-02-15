@@ -49,64 +49,66 @@ export default function UserList({ onEdit, refreshKey }) {
         onChange={(e) => setSearch(e.target.value)}
       />
 
-      <table className="w-full mt-4 ">
-        <thead>
-          <tr className="bg-gray-100 text-gray-700 text-left">
-            <th className="p-2 border">Name</th>
-            <th className="p-2 border">Email</th>
-            <th className="p-2 border">Phone</th>
-            <th className="p-2 border">Actions</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {filteredUsers?.length === 0 ? (
-            <tr>
-              <td colSpan="4" className="text-center py-10 text-gray-500">
-                <div className="flex flex-col items-center gap-2">
-                  <span className="text-lg font-medium">
-                    {search ? "No users found" : "No users yet"}
-                  </span>
-
-                  <span className="text-sm text-gray-400">
-                    {search
-                      ? "Try a different search keyword."
-                      : "Click 'Add User' to create your first user."}
-                  </span>
-                </div>
-              </td>
+      <div className="overflow-x-auto">
+        <table className="w-full mt-4">
+          <thead>
+            <tr className="bg-gray-100 text-gray-700 text-left">
+              <th className="p-2 border">Name</th>
+              <th className="p-2 border">Email</th>
+              <th className="p-2 border">Phone</th>
+              <th className="p-2 border">Actions</th>
             </tr>
-          ) : (
-            filteredUsers.map((user) => (
-              <tr
-                className="hover:bg-gray-50 border-b transition"
-                key={user.id}
-              >
-                <td className="p-3 border-b">
-                  {user.firstName} {user.lastName}
-                </td>
-                <td className="p-3 border-b">{user.email}</td>
-                <td className="p-3 border-b">{user.phone}</td>
-                <td className="p-3 border-b space-x-2">
-                  <button
-                    onClick={() => onEdit(user)}
-                    className="bg-amber-400 hover:bg-amber-500 text-white px-3 py-1 rounded cursor-pointer"
-                  >
-                    Edit
-                  </button>
+          </thead>
 
-                  <button
-                    onClick={() => setDeleteUserId(user.id)}
-                    className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded cursor-pointer"
-                  >
-                    Delete
-                  </button>
+          <tbody>
+            {filteredUsers?.length === 0 ? (
+              <tr>
+                <td colSpan="4" className="text-center py-10 text-gray-500">
+                  <div className="flex flex-col items-center gap-2">
+                    <span className="text-lg font-medium">
+                      {search ? "No users found" : "No users yet"}
+                    </span>
+
+                    <span className="text-sm text-gray-400">
+                      {search
+                        ? "Try a different search keyword."
+                        : "Click 'Add User' to create your first user."}
+                    </span>
+                  </div>
                 </td>
               </tr>
-            ))
-          )}
-        </tbody>
-      </table>
+            ) : (
+              filteredUsers.map((user) => (
+                <tr
+                  className="hover:bg-gray-50 border-b transition"
+                  key={user.id}
+                >
+                  <td className="p-3 border-b">
+                    {user.firstName} {user.lastName}
+                  </td>
+                  <td className="p-3 border-b">{user.email}</td>
+                  <td className="p-3 border-b">{user.phone}</td>
+                  <td className="p-3  flex gap-2 flex-wrap">
+                    <button
+                      onClick={() => onEdit(user)}
+                      className="bg-amber-400 hover:bg-amber-500 text-white px-3 py-1 rounded cursor-pointer"
+                    >
+                      Edit
+                    </button>
+
+                    <button
+                      onClick={() => setDeleteUserId(user.id)}
+                      className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded cursor-pointer"
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+      </div>
       {deleteUserId && (
         <Modal onClose={() => setDeleteUserId(null)}>
           <div>

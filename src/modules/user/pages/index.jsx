@@ -44,8 +44,8 @@ export default function Users() {
 
   return (
     <div className="min-h-screen bg-gray-100 py-10">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="flex justify-between items-center mb-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-6">
           <div>
             <h1 className="text-3xl font-bold text-gray-800">
               User Management

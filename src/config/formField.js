@@ -42,7 +42,9 @@ export const userFields = [
 export const validationSchema = Yup.object(
   userFields.reduce((acc, field) => {
     if (field.required) {
-      acc[field.name] = Yup.string().required(`${field.label} required.`);
+      acc[field.name] = Yup.string()
+        .trim()
+        .required(`${field.label} required.`);
     } else {
       acc[field.name] = Yup.string();
     }
