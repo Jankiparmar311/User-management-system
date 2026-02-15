@@ -51,7 +51,7 @@ export default function UserForm({ onSubmit, editingUser }) {
         type="submit"
         disabled={loading}
         className="bg-blue-600 hover:bg-blue-700 transition
-        text-white px-6 py-2 rounded-lg shadow"
+        text-white px-6 py-2 rounded-lg shadow cursor-pointer"
       >
         {loading ? "Saving..." : editingUser ? "Update User" : "Save User"}
       </button>
