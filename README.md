@@ -1,16 +1,143 @@
-# React + Vite
+User Management System — React CRUD App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple React-based CRUD application for managing users. It allows creating, viewing, updating, and deleting users using a REST API.
 
-Currently, two official plugins are available:
+The application is structured to allow easy future extensibility with minimal code changes when adding new fields.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live Demo
 
-## React Compiler
+Frontend:
+https://user-management-system-eta-two.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Backend API:
+https://user-crud-backend-4bl5.onrender.com/users
 
-## Expanding the ESLint configuration
+Repositories
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Frontend Repository:
+https://github.com/Jankiparmar311/User-management-system
+
+Backend Repository:
+https://github.com/Jankiparmar311/user-crud-backend
+
+Features Implemented
+
+Create user
+
+View all users
+
+Update user
+
+Delete user
+
+Form validation
+
+Search users
+
+Confirmation modal for deletion
+
+Toast notifications
+
+Responsive layout
+
+Configuration-driven form fields
+
+Extensible form architecture
+
+Tech Stack
+
+Frontend:
+
+React
+
+Tailwind CSS
+
+Formik (form handling)
+
+Yup validation
+
+Axios
+
+React Toastify
+
+Backend:
+
+JSON Server (mock REST API)
+
+Deployed on Render
+
+Project Structure
+
+Frontend includes:
+
+Reusable Modal component
+
+Config-based form fields
+
+API service layer
+
+Clean component separation
+
+Backend:
+
+JSON Server using db.json
+
+Hosted via Render
+
+Setup Instructions (Frontend)
+
+Install dependencies:
+
+npm install
+
+Run locally:
+
+npm run dev
+
+Backend Setup
+
+Install dependencies:
+
+npm install
+
+Start API:
+
+npm start
+
+Runs JSON server using db.json.
+
+Extensibility — Adding New Fields
+
+To add a new field:
+
+Add field configuration in:
+config/formField.js
+
+Add validation rule in validationSchema.
+
+No changes required in UI or form logic since form renders dynamically from configuration.
+
+Example additions:
+
+Date of Birth
+
+Address
+
+Company
+
+etc.
+
+Assumptions / Decisions
+
+JSON Server used as mock backend.
+
+Authentication not required per assignment.
+
+Pagination skipped as not required.
+
+Focus placed on extensible architecture and clean UX.
+
+Deployment
+
+Frontend deployed using Vercel.
+Backend deployed using Render.
